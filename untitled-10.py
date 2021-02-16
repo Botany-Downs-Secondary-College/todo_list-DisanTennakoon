@@ -8,6 +8,7 @@ def add_tasks( ):
             break
         else:
             todo_list.append(new_task)
+            print("You just added the task {}".format(new_task))
             
 def view_task( ):
     for task in todo_list:
@@ -16,7 +17,7 @@ def view_task( ):
 def view_list( ):
         print("- {}").format(todo_list)
         
-todolist = ["buy clothes", "pay bills", "ring parents"]
+todo_list = ["buy clothes", "pay bills", "ring parents"]
 
 while True:
     option =menu()
@@ -25,18 +26,10 @@ while True:
         add_tasks()
     
     elif option == "2":
-        print("Here is your current task")
-        view_task
+        print("Here is your current task {}".format(view_task))
     elif option == "3":
-        print("Here is your to-do list")
-        view_list    
+        print("Here is your to-do list {}".format(view_list))    
     elif option == "4":
         break
     else:
         print("Invalid option. Please try again")
-        
-
-        
-            
-        
-    
